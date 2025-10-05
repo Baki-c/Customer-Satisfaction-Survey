@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="Customer Satisfaction Survey Form" />
+    <!-- still learning about -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Coffee" />
+    <meta name="application-name" content="Coffee" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon180.jpg" />
+    <link rel="icon" sizes="48x48" href="/assets/icon48.jpg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon32.jpg" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon16.jpg" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/icon192.jpg"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Customer Satisfaction Survey</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="left">
+        <header class="header">
+          <h1 id="title" class="title">
+            We'd love to <br />
+            hear from you
+          </h1>
+          <p id="description" class="intro" hidden>
+            Thank you for visiting! This short survey will help us improve our
+            services
+          </p>
+        </header>
+      </section>
+      <aside class="right">
+        <div class="card">
+          <form id="survey-form">
+            <div class="row-1">
+              <label
+                style="display: none"
+                id="name-label"
+                for="name"
+                class="sr-only"
+                >Name</label
+              >
+              <div class="field">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="input"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <label
+                style="display: none"
+                id="email-label"
+                for="email"
+                class="sr-only"
+                >Email</label
+              >
+              <div class="field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label id="number-label" style="display: none">Age </label>
+                <input
+                  type="number"
+                  name="age"
+                  id="number"
+                  placeholder="Age"
+                  min="10"
+                  max="99"
+                  required
+                />
+              </div>
+              <!-- only for the course rules -->
+              <label id="#survey-form" class="hidden" style="display: none">
+                <input type="radio" value="hidden" name="hidden" />hidden
+                <input type="radio" value="hidden" name="hidden" />hidden
+                <input type="radio" value="hidden" name="hidden" />hidden
+              </label>
+              <div class="field">
+                <!-- <div class="gender">
+                  <span class="gender-span">Gender</span>
+                  <div class="chips">
+                    <button type="button" class="chip" aria-pressed="false">
+                      Male
+                    </button>
+                    <button type="button" class="chip" aria-pressed="false">
+                      Female
+                    </button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="field-dropdown">
+              <select name="pref" id="dropdown" class="dropdown">
+                <option class="option" disabled selected value>
+                  Select an option
+                </option>
+                <option class="option" value="verySatisfied">
+                  Very Satisfied
+                </option>
+                <option class="option" value="satisfied">Satisfied</option>
+                <option class="option" value="neutral">Neutral</option>
+                <option class="option" value="dissatisfied">
+                  Dissatisfied
+                </option>
+                <option class="option" value="veryDissatisfied">
+                  Very Dissatisfied
+                </option>
+              </select>
+            </div>
+            <div class="field">
+              <div class="form-group">
+                <label for="menu">
+                  What coffee do you usually take?
+                  <span style="color: rgba(128, 128, 128, 0.582)">
+                    (Select all that apply)</span
+                  >
+                </label>
+                <br class="space" />
+                <div class="coffee-menu">
+                  <div class="row-3">
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="espresso"
+                        class="input-checkbox"
+                      />
+                      Espresso</label
+                    >
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="americano"
+                        class="input-checkbox"
+                      />
+                      Americano</label
+                    >
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="macchiato"
+                        class="input-checkbox"
+                      />
+                      Macchiato</label
+                    >
+                  </div>
+                  <div class="row-3">
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="latte"
+                        class="input-checkbox"
+                      />
+                      Flat White</label
+                    >
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="cappuccino"
+                        class="input-checkbox"
+                      />
+                      Cappuccino</label
+                    >
+                    <label for=""
+                      ><input
+                        type="checkbox"
+                        name="menu"
+                        value="flat-white"
+                        class="input-checkbox"
+                      />
+                      Latte</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <textarea
+                name="comments"
+                id="comments"
+                rows="4"
+                placeholder="Any comments or suggestions?"
+              ></textarea>
+            </div>
+            <button class="submit-btn" id="submit" type="submit">Send</button>
+          </form>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
