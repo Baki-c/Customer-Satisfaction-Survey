@@ -249,6 +249,7 @@ input[type="number"] {
 
 .input-checkbox:hover {
   border-color: var(--color-border-hover);
+  border: 1px;
 }
 
 .input-checkbox:checked {
@@ -399,4 +400,5 @@ textarea {
     gap: var(--spacing-xs);
   }
 }
+
 
