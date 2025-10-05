@@ -85,7 +85,7 @@ body {
   position: relative;
   padding: var(--spacing-section);
   background-color: var(--color-background);
-  background-image: url("/assets/coffee-1.jpg");
+  background-image: url("/Customer-Satisfaction-Survey/assets/coffee-1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -307,7 +307,7 @@ textarea {
 
   .left {
     padding: 8vw;
-    background-image: url("/assets/coffee-2.jpg");
+    background-image: url("/Customer-Satisfaction-Survey/assets/coffee-2.jpg");
     background-size: 55%;
     background-position: right;
     background-position-x: 120%;
@@ -399,3 +399,4 @@ textarea {
     gap: var(--spacing-xs);
   }
 }
+
