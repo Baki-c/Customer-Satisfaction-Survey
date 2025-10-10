@@ -46,10 +46,12 @@ function showFeedback() {
     transform: translate(-50%, -50%) translateY(20px);
     background-color: #f9e8d4;
     color: #4c3837;
-    padding: 50px 70px;
+    padding: 45px 0px;
     font-family: "Noto Sans", sans-serif;
-    font-size: 18px;
+    font-size: 100%;
     font-weight: 550;
+    width: 60%;
+    max-width: 400px;
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.2s ease, transform 0.2s ease;
@@ -73,6 +75,12 @@ function showFeedback() {
     opacity: 0;
     transition: opacity 0.2s ease;
   `;
+
+  const responsiveQuery = window.matchMedia("(max-width: 400px)");
+  if (responsiveQuery.matches) {
+    feedback.style.padding = "35px 0px";
+    feedback.style.fontSize = "80%";
+  }
 
   document.body.appendChild(overlay);
   document.body.appendChild(feedback);
