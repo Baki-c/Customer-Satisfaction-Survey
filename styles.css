@@ -232,7 +232,6 @@ button {
 
 .chip {
   -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
 }
 
 .chip:active {
@@ -271,6 +270,7 @@ button {
 /*--- Number Arrows ---*/
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
   -webkit-appearance: none;
   margin: 0;
 }
@@ -372,6 +372,19 @@ textarea {
   border: 0;
 }
 
+/*--- Bug Fix ---*/
+input {
+  -webkit-text-fill-color: var(--color-text-primary) !important;
+  color: var(--color-text-primary) !important;
+  -webkit-appearance: none;
+}
+
+.chip:focus-within {
+  transform: translateY(-1.75px);
+  will-change: transform;
+  transition: transform var(--transition-fast);
+}
+
 /*--- Responsive Design ---*/
 
 /* Tablet Styles */
@@ -459,6 +472,10 @@ textarea {
 
   .chips {
     gap: 8px;
+  }
+
+  .chip:focus-within {
+    transform: translateY(-2px);
   }
 
   .gender-span {
